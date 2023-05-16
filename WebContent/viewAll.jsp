@@ -80,17 +80,16 @@
 						i++;
 				%>
 				<tr>
-					<th scope="row"><%=i %></th>
+					<th scope="row"><%=i%></th>
 					<td><%=user.getFirstName()%></td>
 					<td><%=user.getLastName()%></td>
 					<td>@<%=user.getEmail()%></td>
 					<td><%=user.getPassword()%></td>
-					<td align="center">
-						<a href="updateForm?id=<%=user.getId()%>" class="edit" data-toggle="tooltip"><i
-								class="material-icons">&#xE254;&nbsp;&nbsp;</i> </a> 
-						<a href="delete?id=<%=user.getId()%>" class="delete"
-							data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-					</td>
+					<td align="center"><a
+						href="updateForm.jsp?id=<%=user.getId()%>" class="edit"
+						data-toggle="tooltip"><i class="material-icons">&#xE254;&nbsp;&nbsp;</i>
+					</a> <a href="delete?id=<%=user.getId()%>" class="delete"
+						data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a></td>
 
 				</tr>
 				<%
