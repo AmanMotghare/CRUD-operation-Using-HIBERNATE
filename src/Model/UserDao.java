@@ -60,6 +60,27 @@ public class UserDao {
 		return user;
 	}
 	
+	public User AuthenticateUser(String Email, String Password){
+		System.out.println("inside Authenticate User");
+		
+		System.out.println("Print Query : from User WHERE u.email = :" + Email + " AND u.password = :" + Password);
+		
+		Query query = session.createQuery("from User WHERE email = :email and password = :password");
+		query.setParameter("email", Email);
+		query.setParameter("password", Password);
+		
+		User user =  (User) query.uniqueResult();
+		
+		if(user!=null){
+			System.out.println("User is : " + user);
+			return user;
+		}
+		else{
+			return null;
+		}
+		
+	}
+	
 	public User updateUser(User user) {
 		System.out.println("inside find by id");
 		
@@ -75,7 +96,6 @@ public class UserDao {
 		
 		User user = findByid(id);
 
-		
 		session.delete(user);
 		
 		closeAll();

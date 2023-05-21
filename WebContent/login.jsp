@@ -22,10 +22,10 @@
 		<h3 align="center">USER REGISTRATION</h3>
 		<hr>
 		<%
-			if (request.getAttribute("errmsg") != null) {
+			if (request.getAttribute("loginerrmsg") != null) {
 		%>
 		<div class="alert alert-danger alert-dismissible fade show" role="alert">
-			<strong><%=request.getAttribute("errmsg") %></strong>Try Again.
+			<strong><%=request.getAttribute("loginerrmsg")%></strong>Try Again.
 			<button type="button" class="btn-close" data-bs-dismiss="alert"
 				aria-label="Close"></button>
 		</div>
@@ -42,22 +42,9 @@
 		</div>
 		<hr>
 		<br>
-		<form action="register" method="post">
+		<form action="login" method="post">
 			<!-- 2 column grid layout with text inputs for the first and last names -->
 			<div class="row mb-4">
-				<div class="col">
-					<div class="form-outline">
-						<input type="text" name="firstName" id="form3Example1" class="form-control" /> <label
-							class="form-label" for="form3Example1">First name</label>
-					</div>
-				</div>
-
-				<div class="col">
-					<div class="form-outline">
-						<input type="text" name="lastName" id="form3Example2" class="form-control" /> <label
-							class="form-label" for="form3Example2">Last name</label>
-					</div>
-				</div>
 
 				<div class="col">
 					<!-- Email input -->
@@ -80,13 +67,13 @@
 
 			<!-- Submit button -->
 			<button type="submit" class="btn btn-primary btn-sm container"
-				align="center">Sign Up</button>
+				align="center">Log In</button>
 		</form>
 
 		<br>
 
 		<h6 align="center">
-			Already an User? <a href="login.jsp">Sign In</a>
+			New User? <a href="index.jsp">Create an Account</a>
 		</h6>
 		<br>
 		<hr>
