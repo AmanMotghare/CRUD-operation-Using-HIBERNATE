@@ -18,6 +18,12 @@
 
 	Hi, I am welcome page
 	<%=email%>
+	
+	<br>
+	
+	<br>
+	
+	<a href="logout"> Log-out </a>
 
 </body>
 </html>
